@@ -1,0 +1,3 @@
+[submodule "aiovelib"]
+	path = dbus-p1/ext/aiovelib
+	url = https://github.com/victronenergy/aiovelib.git
