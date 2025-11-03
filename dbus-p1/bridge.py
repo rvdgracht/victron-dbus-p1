@@ -2,8 +2,12 @@ import asyncio
 import errno
 import os.path
 
-from dbus_next.constants import BusType
-from dbus_next.aio import MessageBus
+try:
+    from dbus_fast.aio import MessageBus
+    from dbus_fast.constants import BusType
+except ImportError:
+    from dbus_next.constants import BusType
+    from dbus_next.aio import MessageBus
 from aiovelib.service import Service, IntegerItem, DoubleItem, TextItem
 
 from .dsmr import SerialReader, OBIS_ID, SerialException
